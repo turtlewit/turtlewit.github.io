@@ -22,6 +22,7 @@ const handleMouseDownOnce = () => {
 window.addEventListener('keydown', handleFirstTab)
 
 const backToTopButton = document.querySelector(".back-to-top");
+const scrollHint = document.querySelector(".header__scroll-hint");
 let isBackToTopRendered = false;
 
 let alterStyles = (isBackToTopRendered) => {
@@ -39,5 +40,9 @@ window.addEventListener("scroll", () => {
   } else {
     isBackToTopRendered = false;
     alterStyles(isBackToTopRendered);
+
   }
+
+  var amount = 1.0 - (window.scrollY / 500.0);
+  scrollHint.style.opacity = amount;
 });

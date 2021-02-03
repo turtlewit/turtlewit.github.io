@@ -24,13 +24,14 @@
 
   <!-- Put your site title here -->
   <title>
-    Syed Ali Hussnain | A Web Developer based in Lahore, Pakistan.
+    Kat Witten | Game Development Tools and Graphics Engineer
   </title>
 
-  <meta name="description" content="Add small description of yourslef.">
+  <meta name="description" content="Game Developer specializing in Tools and Graphics.">
   <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
-  <meta name="keywords" content="Put your name, skills and some coding keywords" />
-  <link rel="stylesheet" href="index.css" />
+  <meta name="keywords" content="Kat Witten GameDev Game Developer Graphics Tools Engineer" />
+  <!-- link rel="stylesheet" href="index.css" / -->
+	<link rel="stylesheet" href="index.css" />
 </head>
 
 <body>
@@ -42,7 +43,7 @@
       <nav class="nav" role="navigation">
         <ul class="nav__items">
           <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-          <li class="nav__item"><a href="#clients" class="nav__link">Clients</a></li>
+          <!-- li class="nav__item"><a href="#clients" class="nav__link">Clients</a></li -->
           <li class="nav__item">
             <a href="#about" class="nav__link">About</a>
           </li>
@@ -56,12 +57,18 @@
       <div class="header__text">
         <h1 class="heading-primary">
           <!-- Replace the following name with your name -->
-          <span>Syed Ali Hussnain</span>
+          <span>Kat Witten</span>
         </h1>
         <!-- Put a small paragraph about yourself -->
-        <p>A Web Developer based in Lahore, Pakistan.</p>
-        <a href="#contact" class="btn btn--pink">Get in touch</a>
+        <p>Game Developer specializing in Engine Programming, Tools and Graphics.</p>
+        <a href="#contact" class="btn">Get in touch</a>
       </div>
+    </div>
+    <div class="header__scroll-hint">
+			<p style="margin-top: auto;margin-bottom: auto;">
+				Scroll for more info!
+			</p>
+    	<img src="./images/arrow-up.svg" alt="Scroll for more info" class="scroll-hint__image"/>
     </div>
   </header>
 
@@ -75,6 +82,175 @@
         <div class="work__boxes">
 
           <!-- Each div with the work__box class is a project. -->
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>My Engine Project</h3>
+              <p>
+              A learning-oriented personal 3D Game Engine project written from scratch using <b class="thicker">C++</b> and <b class="thicker">Vulkan</b>. It features:
+              </p>
+              <ul class="work__list">
+                <li>A deferred metallic <b class="thicker">PBR</b>-based pipline.</li>
+                <li>Order-independent transparency using an A-buffer.</li>
+                <li>Normal and Metallic mapping.</li>
+                <li>Shadow mapping.</li>
+                <li>A simple <b class="thicker">Entity Component System</b>.</li>
+              </ul>
+
+              (Model in screenshot credit <a href="https://sketchfab.com/3d-models/lantern-and-fireflies-184bc0cce6614e8c9e0bc1a9efe4be5c" target="_blank">Riccardo Mazzi on Sketchfab</a>)
+
+              <div class="work__links">
+                <a href="#" target="_blank" class="link__text">
+                  View the Code (this link doesn't work) <span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/engine.png" class="work__image" alt="Godot Plugin Screenshot" />
+            </div>
+          </div>
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Godot C++ Helper Plugin</h3>
+              <p>
+                An engine plugin I made to improve the workflow of using C++ with Godot Engine. It features:
+              </p>
+              <ul class="work__list">
+                <li>The ability to compile C++ from within the editor, using a build output that supports color.</li>
+                <li>Creating new C++ classes from a template and automatically adding them to the build system.</li>
+              </ul>
+
+              <div class="work__links">
+                <a href="https://gitlab.com/turtlewit/godot_cpp_helper_plugin" target="_blank" class="link__text">
+                  View the Code <span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/godot-cpp.png" class="work__image" alt="Godot Plugin Screenshot" />
+            </div>
+          </div>
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Little Moster Story</h3>
+              <p>
+              <b class=thicker>Little Monster Story</b> is a <b class=thicker>3D Platformer</b> made with Godot Engine about helping out another moster. You play as a frog
+              and hop around, recovering a poor monster's memories inside their head. I worked on this with a team of 3, and 
+              This was our Capstone project (senior project), and we had to make the game playable in browsers. My role was 
+              primarily <b class=thicker>engineer</b> and I made: 
+              </p>
+              <ul class="work__list">
+                <li>A physics-based movement system with rope-like swinging and wall-jumping.</li>
+                <li>A robust path-based moving platform system.</li>
+                <li>An extensive settings menu with performance and accessibility options.</li>
+                <li>An efficient grass shader that sways with the wind and is deformed by the player.</li>
+              </ul>
+              <!-- ul class="work__list">
+                <li>Godot Engine, Unity</li>
+                <li>Gameplay, Tools, and Backend Systems Programming</li>
+                <li>3D, Shaders, Networking, Source Control</li>
+                <li>Design, Iteration, Playtesting</li>
+              </ul -->
+
+              <div class="work__links">
+                <a href="https://dianesparks.itch.io/capstone" target="_blank" class="link__text">
+                  Play the Game In Your Browser <span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/little-monster-story.png" class="work__image" alt="Little Monster Story Screenshot featuring the Grass Shader I Wrote" />
+            </div>
+          </div>
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Feline Isle</h3>
+              <p>
+              <b class=thicker>Feline Isle</b> is a <b class=thicker>Online-Multiplayer 3D Third-Person Deathmath Game</b> made with Godot Engine and written completely in <b class="thicker">C++</b>. 
+              You gather power-ups across the map, avoiding
+              or attacking other players until everyone is placed onto a small battle arena. Whoever collected the most power ups has the biggest
+              advantage at the end. This was a school project I worked on with 3 other team mates, and my role was primarily <b class=thicker>engineer</b>
+              and I made: 
+              </p>
+              <ul class="work__list">
+                <li>All of the networking code. The game uses a client-server architecture and is hosted by one player.</li>
+                <li>An efficient, easy to use tool to place large amounts of props and foliage in the scene.</li>
+              </ul>
+              <!-- ul class="work__list">
+                <li>Godot Engine, Unity</li>
+                <li>Gameplay, Tools, and Backend Systems Programming</li>
+                <li>3D, Shaders, Networking, Source Control</li>
+                <li>Design, Iteration, Playtesting</li>
+              </ul -->
+
+              <div class="work__links">
+                <a href="https://turtlewit.itch.io/feline-isle" target="_blank" class="link__text">
+                  Download the Game on Itch.io <span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/feline-isle.png" class="work__image" alt="Feline Isle Screenshot" />
+            </div>
+          </div>
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>Planet Initium</h3>
+              <p>
+              <b class=thicker>Planet Initium</b> is a <b class=thicker>Online-Multiplayer RPG Survival game</b> made with <b class="thicker">Unity and C#</b>. 
+              I worked with the Planet Initium team, a team of talented students from Laguna College of Art and Design (LCAD)
+              and UCI as an <b class=thicker>engineer</b> for almost a year. I converted a large, unfamiliar codebase from being completely 
+              single-player to being networked using the Mirror Unity plugin, as well as doing refactoring and optimization work on the
+              codebase. I also introduced a code review system to encourage better communication and code consistency
+              within the codebase.
+              </p>
+              <!-- ul class="work__list">
+                <li>Godot Engine, Unity</li>
+                <li>Gameplay, Tools, and Backend Systems Programming</li>
+                <li>3D, Shaders, Networking, Source Control</li>
+                <li>Design, Iteration, Playtesting</li>
+              </ul -->
+
+              <div class="work__links">
+                <a href="https://www.planet-initium.com/" target="_blank" class="link__text">
+                  Visit Site <span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/planet-initium.jpg" class="work__image" alt="Planet Initium Screenshot" />
+            </div>
+          </div>
+
+          <div class="work__box">
+            <div class="work__text">
+              <h3>My Games on Itch.io</h3>
+              <p>
+                Checkout out my other game projects from game jams and personal projects on Itch.io.
+              </p>
+              <ul class="work__list">
+                <li>Godot Engine, Unity</li>
+                <li>Gameplay, Tools, and Backend Systems Programming</li>
+                <li>3D, Shaders, Networking, Source Control</li>
+                <li>Design, Iteration, Playtesting</li>
+              </ul>
+
+              <div class="work__links">
+                <a href="https://turtlewit.itch.io/" target="_blank" class="link__text">
+                  See and Play Games <span>&rarr;</span>
+                </a>
+              </div>
+            </div>
+            <div class="work__image-box">
+              <img src="./images/games.jpg" class="work__image" alt="Project 1" />
+            </div>
+          </div>
+
+          <!--
 
           <div class="work__box">
             <div class="work__text">
@@ -158,17 +334,20 @@
               <img src="./images/project-3.png" class="work__image" alt="Project 3" />
             </div>
           </div>
+          -->
         </div>
+
+      <!-- a href="https://turtlewit.itch.io/" class="btn" target="_blank" rel="noopener noreferrer">My Games on Itch.io</a -->
       </div>
     </section>
 
     <!-- ***** Clients ***** -->
+    <!--
 
     <section class="client" id="clients">
       <div class="row">
         <h2>Clients</h2>
         <div class="client__logos">
-          <!-- Add logos of the clients or companies you'have worked with. -->
           <img src="./images/ronjones.png" class="client__logo" alt="Company 2" />
           <img src="./images/goldengrid.png" class="client__logo" alt="Company 3" />
           <img src="./images/bullseye.png" class="client__logo" alt="Company 1" />
@@ -179,6 +358,7 @@
       </div>
     </section>
 
+    -->
     <!-- ***** About ***** -->
 
     <section class="about" id="about">
@@ -188,18 +368,36 @@
           <div class="about__text">
             <!-- Replace the below paragraph with info about yourself -->
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos id
-              nostrum illo harum blanditiis, tenetur eum suscipit cupiditate
-              in vel, ex quam quidem quos mollitia labore aut sunt eius
-              ratione molestiae fuga veniam facere similique voluptate.
+              Hello! I'm Kat Witten (she/her) and I'm a game developer! I specialize in
+              engine backend, tools, and graphics programming, but I consider myself well 
+              rounded and have a little experience in just about every aspect of game development.
+              I'm always excited to learn new things and tackle new and exciting challenges!
+            </p>
+            <p>
+              I'm currently pursuing a Bachelor of Science in Computer Game Science at UC Irvine,
+              and I plan to graduate in Spring 2021.
+            </p>
+            <p>
+              I play a wide variety of games, but my favorites are comfy fantasy games featuring
+              animal characters! My other interests include playing and composing music, reading
+              fiction and graphic novels, 3D art and animation, and retro computers.
+            </p>
+            <p>
+              I'm passionate about Free and Open Source Software. I publish all of my personal work
+              under permissive licenses and use Free and Open Source software like Linux, Godot
+              Engine, and Blender for my personal game development projects. I believe that open 
+              source games can benefit both players and developers.
             </p>
             <!-- Provide a link to your resume -->
-            <a href="#" class="btn">My Resume</a>
+            <ul class="about__button_list">
+              <li class="about__button_element"><a href="#" class="btn">My Resume</a></li>
+              <li class="about__button_element"><a href="#contact" class="btn">Contact</a></li>
+            </ul>
           </div>
 
           <div class="about__photo-container">
             <!-- Add a nice photo of yourself -->
-            <img class="about__photo" src="./images/syed-ali-hussnain.jpg" alt="" />
+            <img class="about__photo" src="./images/profile.jpg" alt="" />
           </div>
         </div>
       </div>
@@ -212,56 +410,45 @@
     <div class="row">
       <h2>Get in Touch</h2>
       <div class="contact__info">
-        <p>
-          Are you looking for a fast-performing and user-friendly website to
-          represent your product or business? or looking for any kind of
-          consultation? or want to ask questions? or have some advice for me
-          or just want to say "Hi 👋" in any case feel free to Let me know. I
-          will do my best to respond back. 😊 The quickest way to reach out to
-          me is via an email.
-        </p>
+        <p>Looking for an engine, tools, or graphics engineer for your team?</p>
+        <p>Email me at turtlewit {at} gmail {dot} com.</p>
         <!-- Replace the email with yours -->
-        <a href="mailto:you@example.com" class="btn">you@example.com</a>
+        <!-- a href="mailto:you@example.com" class="btn">you@example.com</a -->
       </div>
     </div>
+    <div class="row">
+      <!-- Update the links to point to your accounts -->
+      <ul class="footer__social-links">
+        <li class="footer__social-link-item">
+          <a href="https://twitter.com/katzewit/" title="Link to Twitter Profile @Katzewit" target="_blank" rel="noopener noreferrer">
+            <img src="./images/twitter.svg" class="footer__social-image" alt="Twitter">
+          </a>
+        </li>
+        <li class="footer__social-link-item">
+          <a href="https://github.com/turtlewit/" title="Link to Github Profile turtlewit" target="_blank" rel="noopener noreferrer">
+            <img src="./images/github.svg" class="footer__social-image" alt="Github">
+          </a>
+        </li>
+        <li class="footer__social-link-item">
+          <a href="https://turtlewit.itch.io/" title="Link to Itch.io Profile turtlewit" target="_blank" rel="noopener noreferrer">
+            <img src="./images/itchio-logo-textless-white.svg" class="footer__social-image" alt="Itch.io">
+          </a>
+        </li>
+      </ul>
+
   </section>
 
   <!-- ***** Footer ***** -->
 
   <footer role="contentinfo" class="footer">
-    <div class="row">
-      <!-- Update the links to point to your accounts -->
-      <ul class="footer__social-links">
-        <li class="footer__social-link-item">
-          <a href="https://twitter.com/nisarhassan12/" title="Link to Twitter Profile">
-            <img src="./images/twitter.svg" class="footer__social-image" alt="Twitter">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href="https://github.com/nisarhassan12/" title="Link to Github Profile">
-            <img src="./images/github.svg" class="footer__social-image" alt="Github">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href="https://codepen.io/nisar_hassan" title="Link to Codepen Profile">
-            <img src="./images/codepen.svg" class="footer__social-image" alt="Codepen">
-          </a>
-        </li>
-        <li class="footer__social-link-item">
-          <a href=https://www.linkedin.com/in/nisar-hassan-naqvi-413466199/">
-            <img src="./images/linkedin.svg" title="Link to Linkedin Profile" class="footer__social-image" alt="Linkedin">
-          </a>
-        </li>
-      </ul>
-
       <!-- If you give me some credit by keeping the below paragraph, will be huge for me 😊 Thanks. -->
       <p>
-        &copy; 2020 - Template designed & developed by <a href="https://nisar.dev" class="link">Nisar</a>.
+        &copy; 2020 - Template designed &amp; developed by <a href="https://nisar.dev" class="link">Nisar</a>.
       </p>
       <div class="footer__github-buttons">
         <iframe
           src="https://ghbtns.com/github-btn.html?user=nisarhassan12&repo=portfolio-template&type=watch&count=true"
-          frameborder="0" scrolling="0" width="170" height="20" title="Watch Portfolio Template on GitHub">
+          frameborder="0" scrolling="0" width="270" height="20" title="Watch Portfolio Template on GitHub">
         </iframe>
       </div>
     </div>
