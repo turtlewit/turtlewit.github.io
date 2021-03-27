@@ -31,7 +31,7 @@
   <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
   <meta name="keywords" content="Kat Witten GameDev Game Developer Graphics Tools Engineer" />
   <!-- link rel="stylesheet" href="index.css" / -->
-	<link rel="stylesheet" href="index.css" />
+        <link rel="stylesheet" href="index.css" />
 </head>
 
 <body>
@@ -59,16 +59,20 @@
           <!-- Replace the following name with your name -->
           <span>Kat Witten</span>
         </h1>
+        <p></p>
         <!-- Put a small paragraph about yourself -->
-        <p>Game Developer specializing in Engine Programming, Tools and Graphics.</p>
+        <span style="line-height: 0">
+        <p>Game Programmer:</p>
+        <p>Engine, Graphics, Tools, and Gameplay</p>
+        </span>
         <a href="#contact" class="btn">Get in touch</a>
       </div>
     </div>
     <div class="header__scroll-hint">
-			<p style="margin-top: auto;margin-bottom: auto;">
-				Scroll for more info!
-			</p>
-    	<img src="./images/arrow-up.svg" alt="Scroll for more info" class="scroll-hint__image"/>
+                        <p style="margin-top: auto;margin-bottom: auto;">
+                                Scroll for more info!
+                        </p>
+            <img src="./images/arrow-up.svg" alt="Scroll for more info" class="scroll-hint__image"/>
     </div>
   </header>
 
@@ -87,9 +91,10 @@
             <div class="work__text">
               <h3>My Engine Project</h3>
               <p>
-              A learning-oriented personal 3D Game Engine project written from scratch using <b class="thicker">C++</b> and <b class="thicker">Vulkan</b>. It features:
+              A learning-oriented personal 3D Game Engine project written using <b class="thicker">C++</b>, <b class="thicker">SDL2</b>, and <b class="thicker">Vulkan</b>. It features:
               </p>
               <ul class="work__list">
+                <li><b class="thicker">GLTF 2.0</b> scene loading.</li>
                 <li>A deferred, metallic <b class="thicker">PBR</b>-based pipline.</li>
                 <li>Order-independent transparency using an A-buffer.</li>
                 <li>Normal and Metallic mapping.</li>
@@ -97,16 +102,28 @@
                 <li>A simple implementation of <b class="thicker">Entity Component System</b>.</li>
               </ul>
 
-              (Model in screenshot credit <a href="https://sketchfab.com/3d-models/lantern-and-fireflies-184bc0cce6614e8c9e0bc1a9efe4be5c" target="_blank">Riccardo Mazzi on Sketchfab</a>)
 
               <div class="work__links">
-                <a href="#" target="_blank" class="link__text">
-                  View the Code (this link doesn't work) <span>&rarr;</span>
+                <a href="https://gitlab.com/turtlewit/another-engine-project" target="_blank" class="link__text">
+                  View the Code<span>&rarr;</span>
                 </a>
               </div>
             </div>
             <div class="work__image-box">
-              <img src="./images/engine.png" class="work__image" alt="Godot Plugin Screenshot" />
+              <div class="engine_image">
+              <img src="./images/engine.png" alt="Engine Project Screenshot" />
+              <p style="margin: 0;">
+                (Model in screenshot credit <a href="https://sketchfab.com/3d-models/lantern-and-fireflies-184bc0cce6614e8c9e0bc1a9efe4be5c" target="_blank">Riccardo Mazzi on Sketchfab</a>)
+              </p>
+              </div>
+              <img src="./images/gold.png" class="engine_image" alt="Engine Project Screenshot" />
+              <!--
+              <video class="engine_image" controls>
+                <source src="images/tank2.webm" type="video/webm">
+              </video>
+              -->
+              <a class="image_prev" onclick="advance_engine_slide_image('engine_image', -1)">&lt;</a>
+              <a class="image_next" onclick="advance_engine_slide_image('engine_image', 1)">&gt;</a>
             </div>
           </div>
 
@@ -145,6 +162,7 @@
                 <li>A physics-based movement system with rope-like swinging and wall-jumping.</li>
                 <li>A robust path-based moving platform system.</li>
                 <li>An extensive settings menu with performance and accessibility options.</li>
+                <li>A saving, autosaving, and loading system.</li>
                 <li>An efficient grass shader that sways with the wind and is deformed by the player.</li>
               </ul>
               <!-- ul class="work__list">
@@ -161,7 +179,16 @@
               </div>
             </div>
             <div class="work__image-box">
-              <img src="./images/little-monster-story.png" class="work__image" alt="Little Monster Story Screenshot featuring the Grass Shader I Wrote" />
+              <img src="./images/little-monster-story.png" class="lms_image" alt="Little Monster Story Screenshot featuring the Grass Shader I Wrote" />
+              <img src="./images/lms_settings.png" class="lms_image" alt="Little Monster Story Screenshot featuring the Settings Menu I programmed" />
+              <div class="lms_image">
+              	<img src="./images/lms_path.png" alt="Little Monster Story Screenshot featuring the moving platform path system I wrote" />
+                <p style="margin: 0;">
+                  Moving Platform system using bezier paths.
+                </p>
+              </div>
+              <a class="image_prev" onclick="advance_engine_slide_image('lms_image', -1)">&lt;</a>
+              <a class="image_next" onclick="advance_engine_slide_image('lms_image', 1)">&gt;</a>
             </div>
           </div>
 
@@ -193,7 +220,12 @@
               </div>
             </div>
             <div class="work__image-box">
-              <img src="./images/feline-isle.png" class="work__image" alt="Feline Isle Screenshot" />
+              <img src="./images/feline-isle.png" class="fi_image" alt="Feline Isle Screenshot" />
+              <video class="fi_image" alt="Feline Isle video featuring the prop placement tool I wrote." controls>
+                <source src="images/fi_curve.webm" type="video/webm">
+              </video>
+              <a class="image_prev" onclick="advance_engine_slide_image('fi_image', -1)">&lt;</a>
+              <a class="image_next" onclick="advance_engine_slide_image('fi_image', 1)">&gt;</a>
             </div>
           </div>
 
@@ -209,7 +241,7 @@
                 <li>Converted a large, unfamiliar codebase from being completely single-player to being networked using the Mirror Unity Plugin.</li>
                 <li>Refactored code to be more robust.</li>
                 <li>Optimized various aspects of the game using Unity features like static culling and static batching.</li>
-		<li>Used RenderDoc to debug and highlight aspects of the scene that were inefficient or incorrect.</li>
+                <li>Used RenderDoc to debug and highlight aspects of the scene that were inefficient or incorrect.</li>
                 <li>Introduced a code review system to encourage better communication and code consistency.</li>
               </ul>
 
@@ -381,14 +413,13 @@
               fiction and graphic novels, 3D art and animation, and retro computers.
             </p>
             <p>
-              I'm passionate about Free and Open Source Software. I publish all of my personal work
-              under permissive licenses and use Free and Open Source software like Linux, Godot
-              Engine, and Blender for my personal game development projects. I believe that open 
-              source games can benefit both players and developers.
+              I love learning and broadening my horizons. I'm always looking for better, faster, 
+              and simpler solutions to problems, and I'm always excited to try and understand 
+              things I'm unfamiliar with.
             </p>
             <!-- Provide a link to your resume -->
             <ul class="about__button_list">
-              <li class="about__button_element"><a href="#" class="btn">My Resume</a></li>
+              <li class="about__button_element"><a href="./resume.pdf" class="btn" target="_blank">My Resume</a></li>
               <li class="about__button_element"><a href="#contact" class="btn">Contact</a></li>
             </ul>
           </div>
@@ -425,6 +456,11 @@
         <li class="footer__social-link-item">
           <a href="https://github.com/turtlewit/" title="Link to Github Profile turtlewit" target="_blank" rel="noopener noreferrer">
             <img src="./images/github.svg" class="footer__social-image" alt="Github">
+          </a>
+        </li>
+        <li class="footer__social-link-item">
+          <a href="https://gitlab.com/turtlewit/" title="Link to Gitlab Profile turtlewit" target="_blank" rel="noopener noreferrer">
+            <img src="./images/gitlab.svg" class="footer__social-image" alt="Gitlab", style="scale: 1.6;">
           </a>
         </li>
         <li class="footer__social-link-item">

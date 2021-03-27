@@ -46,3 +46,29 @@ window.addEventListener("scroll", () => {
   var amount = 1.0 - (window.scrollY / 500.0);
   scrollHint.style.opacity = amount;
 });
+
+function show_slide_image(class_name, o, n) {
+  let slides = document.getElementsByClassName(class_name);
+  slides[o].style.display = "none";
+  slides[n].style.display = "block";
+}
+
+let slide_image_indices = {};
+
+function mod(x, y) {
+  return ((x % y) + y) % y;
+}
+
+function advance_engine_slide_image(class_name, by) {
+  let slides = document.getElementsByClassName(class_name);
+  let o = 0;
+  if (class_name in slide_image_indices) {
+    o = slide_image_indices[class_name];
+  }
+  slide_image_indices[class_name] = mod(o + by, slides.length);
+  show_slide_image(class_name, o, slide_image_indices[class_name]);
+}
+
+show_slide_image("engine_image", 0, 0);
+show_slide_image("lms_image", 0, 0);
+show_slide_image("fi_image", 0, 0);

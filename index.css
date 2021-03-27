@@ -516,7 +516,8 @@ body:not(.user-is-tabbing) a:focus {
 
 .work__image-box {
 	margin-bottom: var(--gutter-normal);
-	align-self: baseline;
+	/*align-self: baseline; */
+	position: relative;
 }
 
 @media(min-width: 901px) {
@@ -530,6 +531,37 @@ body:not(.user-is-tabbing) a:focus {
 	.work__code {
 		height: 4rem;
 	}
+}
+
+.engine_image,
+.lms_image,
+.fi_image{
+	display: none;
+	max-width: 100%;
+}
+
+.image_prev,
+.image_next {
+	cursor: pointer;
+	position: absolute;
+	top: 40%;
+	width: auto;
+	padding: 16px;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+.image_prev:hover,
+.image_next:hover {
+	background-color: rgba(0, 128, 0, 0.8);
+	transition: all .2s;
+}
+
+.image_next {
+	right: 0;
 }
 
 /* --------------------------------------- */
